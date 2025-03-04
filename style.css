@@ -1,0 +1,262 @@
+/* scrol */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: "poppins", poppins;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+/* navbar start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 7%;
+  background-color: rgba(249, 246, 238, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* logo unsil start */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 50px;
+}
+.logo img {
+  height: 100%;
+}
+
+.logo-left {
+  margin-right: 5px;
+  height: 68px;
+}
+.logo-right {
+  margin-left: 5px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-right > img {
+  height: 55px;
+}
+/* logo end */
+
+/* navbar tulisan */
+.navbar .navbar-nav a {
+  color: black;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0 9px;
+  font-weight: 700;
+}
+.navbar .navbar-nav a:hover {
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  background-color: #a1c6e1;
+  position: relative;
+  transition-delay: 0.2s;
+}
+/* humburger menu start */
+.navbar .navbar-extra a {
+  color: black;
+  margin: 0 0, 5rem;
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* humburger menu end */
+/* navbar end */
+
+/* hero start */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-image: url("foto/bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(161, 198, 225) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+.hero .content {
+  padding: 1.5rem 7%;
+  max-width: 60rem;
+}
+.hero .content h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 05);
+}
+.hero .content .cta {
+  margin-top: 5rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #000;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: 700;
+}
+/* hero end */
+
+/* beranda start */
+.beranda {
+  min-height: 100vh;
+  padding: 10rem 15% 1.4rem;
+  background-color: #a1c6e1;
+}
+.beranda p {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.beranda .h2 {
+  padding-left: 16%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.beranda .note {
+  padding-left: 16%;
+  padding-right: 30%;
+}
+
+.beranda > div:nth-child(4) {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 75vw;
+}
+
+.beranda > div > img {
+  width: 25rem;
+  position: relative;
+  bottom: 85px;
+}
+/* beranda end */
+
+/* tutorial start */
+.tutorial {
+  min-height: 100vh;
+  padding: 18rem 15% 1.4rem;
+  background-color: #a1c6e1;
+  display: flex;
+  text-align: center;
+}
+.tutorial .tanya {
+  color: #fff;
+}
+.tutorial p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.tutorial h2 {
+  font-size: 2rem;
+}
+.tutorial h3 {
+  font-size: 1.6rem;
+}
+/* tutorial end */
+
+/* footer start */
+footer {
+  background-color: rgb(249, 246, 238, 1);
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+footer h2 {
+  font-size: 2rem;
+}
+footer .ig {
+  padding-top: 5px;
+  max-height: 100%;
+  width: auto;
+}
+footer .link-ig a {
+  color: black;
+  font-weight: 600;
+  padding: 1rem;
+}
+/* footer end */
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  /* humburger menu */
+  #hamburger-menu {
+    display: inline-block;
+  }
+  /* side bar start */
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgb(249, 246, 238, 1);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #000;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-bottom: 1px solid #000;
+  }
+  /* side bar end */
+  .photo {
+    height: 25vh;
+  }
+}
+
+/* handphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

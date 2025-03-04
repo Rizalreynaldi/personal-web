@@ -1,0 +1,38 @@
+.kalkulator {
+  min-height: 100vh;
+  padding: 10rem 15% 1.4rem;
+  background-color: #a1c6e1;
+}
+.container {
+  background-color: #fff;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+}
